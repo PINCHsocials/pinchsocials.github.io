@@ -6,49 +6,19 @@
 <title>PINCH | Micro Luxury Events</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{ --black:#161512; --cream:#f8f5ef; --tan:#9c9382; --blush:#f1eae1; }
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:var(--black);background:var(--cream);line-height:1.5;}
-h1,h2,h3{font-family:'Cormorant Garamond',serif;text-transform:uppercase;line-height:1.05;letter-spacing:.05em;font-weight:400;}
-.section{padding:110px 8vw;}
-.eyebrow{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--tan);margin-bottom:18px;}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;
-background:var(--cream);color:var(--black);padding:8vw;border-bottom:1px solid var(--black);}
-.hero h1{font-size:clamp(3.5rem,12vw,8.5rem);font-weight:300;letter-spacing:.12em;}
-.hero p{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-top:20px;max-width:500px;font-style:italic;font-weight:400;color:var(--black);}
-.photo-placeholder{width:100%;aspect-ratio:4/3;background:var(--blush);
-display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
-color:var(--tan);border:1px solid var(--tan);}
-.photo-placeholder .mark{font-size:1.3rem;letter-spacing:.1em;}
-.photo-placeholder .label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;letter-spacing:.05em;text-transform:uppercase;}
-.about,.barcart{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.about h2,.barcart h2,.tiers-heading,.gallery-heading,.inquire h2{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:24px;font-weight:400;letter-spacing:.06em;}
-.about p,.barcart p{font-size:1.05rem;max-width:480px;}
-.closing-line{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;margin-top:20px;font-size:1.3rem;}
-.barcart{background:var(--cream);color:var(--black);border-top:1px solid var(--black);border-bottom:1px solid var(--black);}
-.tiers-heading,.gallery-heading{text-align:center;margin-bottom:16px;}
-.tiers-eyebrow,.gallery-eyebrow{text-align:center;}
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:60px;}
-.tier{border:1px solid var(--black);padding:40px 30px;display:flex;flex-direction:column;}
-.tier h3{font-size:1.7rem;margin-bottom:6px;font-weight:500;}
-.tier .guests{font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:var(--tan);margin-bottom:20px;font-family:'Inter',sans-serif;}
-.tier ul{list-style:none;margin-bottom:30px;flex-grow:1;}
-.tier ul li{padding:8px 0;border-top:1px solid #e5e1da;font-size:.95rem;}
-.tier .price{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.7rem;margin-top:auto;letter-spacing:.03em;}
-.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:60px;}
-.inquire{background:var(--cream);color:var(--black);text-align:center;border-top:1px solid var(--black);}
-.inquire a{color:var(--black);text-decoration:underline;}
-.inquire .contact-line{font-family:'Cormorant Garamond',serif;margin-top:10px;font-size:1.3rem;}
-.inquire .note{margin-top:30px;font-size:.9rem;color:var(--tan);}
-footer{text-align:center;padding:30px;font-size:.8rem;color:var(--tan);border-top:1px solid var(--black);}
-@media (max-width:768px){
-.about,.barcart{grid-template-columns:1fr;}
-.tiers,.gallery-grid{grid-template-columns:1fr;}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<nav>
+<a href="index.html" class="nav-brand">Pinch</a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="index.html#inquire">Inquire</a></li>
+</ul>
+</nav>
 
 <section class="hero">
 <div class="eyebrow">Micro Luxury Events</div>
@@ -56,7 +26,7 @@ footer{text-align:center;padding:30px;font-size:.8rem;color:var(--tan);border-to
 <p>A pinch more makes all the difference.</p>
 </section>
 
-<section class="section about">
+<section class="section split">
 <div class="photo-placeholder"><span class="mark">&#10022;</span><span class="label">Photo Coming Soon</span></div>
 <div>
 <div class="eyebrow">About Pinch</div>
@@ -66,67 +36,24 @@ footer{text-align:center;padding:30px;font-size:.8rem;color:var(--tan);border-to
 </div>
 </section>
 
-<section class="section barcart">
-<div>
-<div class="eyebrow">Signature Offering</div>
-<h2>The Bar Cart Experience</h2>
-<p>A standalone offering from PINCH — a styled, curated cocktail cart experience for small private gatherings, hosted and hand-poured by our founder.</p>
+<section class="section offer-alt">
+<div class="eyebrow center-eyebrow">What We Offer</div>
+<h2 class="tiers-heading">Our Services</h2>
+<div class="offers-grid">
+<div class="offer-card">
+<h3>Events</h3>
+<p>Full-scale dinner party design — pipe &amp; drape backdrops, tables, chairs &amp; linens, curated playlists, and on-theme decor, fully set up and torn down for you.</p>
+<a class="btn" href="services.html#events">View Event Packages</a>
 </div>
-<div class="photo-placeholder"><span class="mark">&#10022;</span><span class="label">Photo Coming Soon</span></div>
-</section>
-
-<section class="section">
-<div class="eyebrow tiers-eyebrow">Packages</div>
-<h2 class="tiers-heading">Event Tiers</h2>
-<div class="tiers">
-<div class="tier">
-<h3>The Close Circle</h3>
-<div class="guests">Up to 20 Guests</div>
-<ul>
-<li>Approx. 3 hours of bartending service</li>
-<li>Styled bar cart setup</li>
-<li>2 signature drinks</li>
-<li>Glassware &amp; garnish included</li>
-</ul>
-<div class="price">Starting at $1,500</div>
-</div>
-<div class="tier">
-<h3>The Social Hour</h3>
-<div class="guests">Up to 35 Guests</div>
-<ul>
-<li>Approx. 4 hours of bartending service</li>
-<li>Styled bar cart + linens</li>
-<li>3 signature drinks</li>
-<li>Premium glassware included</li>
-</ul>
-<div class="price">Starting at $2,200</div>
-</div>
-<div class="tier">
-<h3>The Soirée</h3>
-<div class="guests">Up to 50 Guests</div>
-<ul>
-<li>Bartender + assistant, approx. 5 hours</li>
-<li>Fully styled cart &amp; backdrop</li>
-<li>4 signature drinks + mocktail option</li>
-<li>Setup &amp; breakdown included</li>
-</ul>
-<div class="price">Starting at $3,000</div>
+<div class="offer-card">
+<h3>The Bar Cart Experience</h3>
+<p>A standalone styled cocktail cart, hosted and hand-poured by our founder — perfect on its own or paired with any gathering.</p>
+<a class="btn" href="services.html#barcart">View Bar Cart Details</a>
 </div>
 </div>
 </section>
 
-<section class="section">
-<div class="eyebrow gallery-eyebrow">Portfolio</div>
-<h2 class="gallery-heading">Gallery</h2>
-<div class="gallery-grid">
-<div class="photo-placeholder"><span class="mark">&#10022;</span><span class="label">Photo Coming Soon</span></div>
-<div class="photo-placeholder"><span class="mark">&#10022;</span><span class="label">Photo Coming Soon</span></div>
-<div class="photo-placeholder"><span class="mark">&#10022;</span><span class="label">Photo Coming Soon</span></div>
-<div class="photo-placeholder"><span class="mark">&#10022;</span><span class="label">Photo Coming Soon</span></div>
-</div>
-</section>
-
-<section class="section inquire">
+<section class="section inquire" id="inquire">
 <div class="eyebrow">Get In Touch</div>
 <h2>Inquire</h2>
 <p>Currently taking early inquiries for upcoming events.</p>
@@ -135,7 +62,7 @@ footer{text-align:center;padding:30px;font-size:.8rem;color:var(--tan);border-to
 <p class="note">(Replace this email with your real one before sharing the site!)</p>
 </section>
 
-<footer>© 2026 PINCH. All rights reserved.</footer>
+<footer>&copy; 2026 PINCH. All rights reserved.</footer>
 
 </body>
 </html>
